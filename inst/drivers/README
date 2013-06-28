@@ -1,0 +1,7 @@
+JDBC Driver Directory
+
+JDBC drivers (usually JAR files) are provided by database software
+providers.  These files should be placed in this directory.  All
+drivers placed in this directory will be linked in and available
+when the SJDBC package is first loaded.  
+

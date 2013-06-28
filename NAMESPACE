@@ -1,0 +1,13 @@
+export(executeJDBC)
+export(exportJDBC)
+export(importJDBC)
+export(jdbcTimeDate)
+export(jdbcTypeInfo)
+export(loadJDBCDriver)
+export(sjdbcCloseConnection)
+export(sjdbcGetResultSet)
+export(sjdbcOptions)
+if (version$language == "R") {
+    export(.JavaMethod)
+    importFrom("rJava", .jpackage)
+}
