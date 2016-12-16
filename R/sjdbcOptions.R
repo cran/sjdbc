@@ -12,7 +12,7 @@ function(...)
         current <- .sjdbcenv$.sjdbcOptions
     }
     else {
-        current <- list(driverClass = "", con = "", user = "", password = "", keepAlive = FALSE, batchSize = 1000)
+        current <- list(driverClass = "", con = "", user = "", password = "", keepAlive = FALSE, batchSize = 1000, useTransaction = TRUE)
     }
     if(nargs() == 0) {
         return(current)

@@ -33,13 +33,13 @@ importJDBC(sqlQuery, table, driverClass = sjdbcOptions()$driverClass,
   returns a \code{data.frame} containing the requested data.  
 }
 \note{
-Character data can be imported into Spotfire S+ either as \code{character} or as \code{factor}.  \code{importJDBC} uses the 
+Character data can be imported either as \code{character} or as \code{factor}.  \code{importJDBC} uses the 
 value of \code{options(stringsAsFactors)} to determine how to import the data.  
 
 Some arguments can also be set using \code{sjdbcOptions}. 
 }
 \section{Time Zone Handling}{
-Times, Dates, and Timestamps that the datebase returns are assumed to be GMT.  The resulting \code{timeDate} objects in Spotfire S+
+Times, Dates, and Timestamps that the datebase returns are assumed to be GMT.  The resulting \code{timeDate} objects 
 are created in GMT, without conversion.  If you know the time zone of the incoming data, you can specify an alternative time 
 zone for the \code{timeDate} objects by setting \code{options("time.zone")} prior to import.  For further details, see 
 the \code{class.timeDate} help file.

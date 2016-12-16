@@ -1,8 +1,8 @@
 \name{jdbcTimeDate}
 \alias{jdbcTimeDate}
-\title{ Convert a Spotfire S+ timeDate object to standard JDBC Timestamp string  }
+\title{ Convert an splusTimeDate::timeDate object to standard JDBC Timestamp string  }
 \description{
-  Convert a \code{timeDate} vector to a \code{character} vector in the standard format
+  Converts a \code{timeDate} vector to a \code{character} vector in the standard format
   expected by \code{java.sql.Timestamp}:  
   \code{yyyy-mm-dd hh:mm:ss.fffffffff}  (in GMT)
 }

@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Close a Persistent Database Connection }
 \description{
-  Close any open persistent database connection.  
+  Closes any open persistent database connection.  
 }
 \usage{
   sjdbcCloseConnection()

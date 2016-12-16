@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Execute SQL Query on a JDBC-Compatible Database }
 \description{
-  Execute an SQL command on a JDBC-Compatible database.  
+  Executes a SQL command on a JDBC-Compatible database.  
 }
 \usage{
 executeJDBC(sqlQuery, driverClass, con, user, password, keepAlive)

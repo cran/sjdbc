@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Load a JDBC Driver }
 \description{
-  Make a JDBC Driver available to the \code{sjdbc} package.  
+  Makes a JDBC Driver available to the \code{sjdbc} package.  
 }
 \usage{
 loadJDBCDriver(driverJar)

@@ -158,7 +158,7 @@ public class SJDBCBridge {
 
 	public static void sjdbcExportStart(String id, String driverClass,
 			String conInfo, String conUser, String conPassword, String table, boolean appendToTable,
-			boolean preserveColumnCase)
+			boolean preserveColumnCase, boolean useTransaction)
 			throws Exception {
 		// Declare the JDBC objects.
 		Connection con = null;
@@ -209,16 +209,11 @@ public class SJDBCBridge {
 			else if (dmd.storesUpperCaseIdentifiers()) columnCase = IdentifierCase.UPPER;
 		}
 
-        String colNames = createSQLColNames(df.getColNames(), identifierQuoteString, columnCase);
+		if (useTransaction) {
+			// Disable autocommit (we want this as one transaction)
+			con.setAutoCommit(false);
+		}
 
-        // build prepared statement
-        stmtStr = "INSERT INTO " + table + " " + colNames + " VALUES " +
-            createSQLRowTemplate(df.columns());
-        PreparedStatement pstmt = con.prepareStatement(stmtStr);
-        g_insertStatementHash.put(id, pstmt);
-
-        // Disable autocommit (we want this as one transaction)
-		con.setAutoCommit(false);
 		try {
 			if (!appendToTable) {
 	            stmt = con.createStatement();
@@ -238,6 +233,13 @@ public class SJDBCBridge {
 				stmt.executeUpdate(stmtStr);
 				stmt.close();
 			}
+      String colNames = createSQLColNames(df.getColNames(), identifierQuoteString, columnCase);
+
+      // build prepared statement template
+      stmtStr = "INSERT INTO " + table + " " + colNames + " VALUES " +
+          createSQLRowTemplate(df.columns());
+      PreparedStatement pstmt = con.prepareStatement(stmtStr);
+      g_insertStatementHash.put(id, pstmt);
 		}
 		catch (Exception e) {
 		    // on error, undo changes

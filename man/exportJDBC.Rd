@@ -3,14 +3,15 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Export To a JDBC-Compatible Database }
 \description{
-  Export data to a database using JDBC drivers.  
+  Exports data to a database using JDBC drivers.  
 }
 \usage{
 exportJDBC(data, table, appendToTable = TRUE,
     driverClass = sjdbcOptions()$driverClass, con = sjdbcOptions()$con,
     user = sjdbcOptions()$user, password = sjdbcOptions()$password,
     keepAlive = sjdbcOptions()$keepAlive, preserveColumnCase = FALSE,
-    batchSize = sjdbcOptions()$batchSize)
+    batchSize = sjdbcOptions()$batchSize, 
+    useTransaction = sjdbcOptions()$useTransaction)
 }
 \arguments{
   \item{data}{the \code{data.frame} object to export. }
@@ -26,6 +27,7 @@ exportJDBC(data, table, appendToTable = TRUE,
   If \code{FALSE} (the default), column name case is converted to the database-specific default. }
   \item{batchSize}{an integer specifying the number of rows sent to the database in each batch, if batch updates are supported by the JDBC driver.  
   Default value is \code{1000}.  A value of \code{0} disables batch exporting.}
+  \item{useTransaction}{ If \code{TRUE}, exports the data as a single transaction, otherwise commits throughout export. }
 }
 \details{
   Exports data to the database using the JDBC driver specified in \code{driverClass}.  The required JDBC driver must be
