@@ -24,7 +24,7 @@ jdbcTypeInfo(driverClass, con, user, password, keepAlive)
   the Java documentation for description of the fields in the table.  Useful for debugging.  
 }
 \references{
- 2004. \url{http://java.sun.com/j2se/1.5.0/docs/api/java/sql/DatabaseMetaData.html#getTypeInfo()}. \emph{Java SE Developer Documentation}. Redwood Shores, CA: Oracle Corporation.
+ 2004. \url{https://docs.oracle.com/javase/1.5.0/docs/api/java/sql/DatabaseMetaData.html#getTypeInfo()}. \emph{Java SE Developer Documentation}. Redwood Shores, CA: Oracle Corporation.
 }
 \examples{\dontrun{
 jdbcTypeInfo(driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver", 

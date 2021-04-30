@@ -1,5 +1,5 @@
-49582b1294ffc050efd93cd12d98b6df *DESCRIPTION
-3304d6d911ea93fb084e8a371a563f80 *LICENSE
+40338065b48a85022d3579d5cbd3d4e1 *DESCRIPTION
+50e5a00d0a9dd82859aa4bec162d9632 *LICENSE
 02337e7da8e8c14b1d20437f97face65 *NAMESPACE
 14f8298f71ad0b360e919b77c36c3fbd *R/executeJDBC.R
 58c882f1e665cec32a81af93a14e9ced *R/exportJDBC.R
@@ -23,7 +23,7 @@ f5c553076968ed8e1da0ade665f76e97 *java/src/SJDBCResultSetUtilities.java
 5318e43732deb3c7554ea98353152897 *man/exportJDBC.Rd
 baf880629602c7492aa36df9bf09084b *man/importJDBC.Rd
 fc618e40a42552d50040f67783b9a8c1 *man/jdbcTimeDate.Rd
-40a5898c0287e990b5acebce2ece99c0 *man/jdbcTypeInfo.Rd
+ec05020d43dec2671aa774ba1b10c872 *man/jdbcTypeInfo.Rd
 df6f46db276fa7fa3c5305b296bcc9f4 *man/loadJDBCDriver.Rd
 b1bf9d5b7de2adb9ce7ee16e7bce0907 *man/sjdbc.Rd
 3b08d60d9073f50cdcd4df683ea74314 *man/sjdbcCloseConnection.Rd
